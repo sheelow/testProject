@@ -12,7 +12,7 @@ class ViewController: UIViewController {
     //MARK: - Property
     private lazy var labelStart: UILabel = {
         let labelStart = UILabel()
-        labelStart.text = "Hello Pidor"
+        labelStart.text = "Hello, man"
         labelStart.textColor = .red
         labelStart.font = UIFont(name: "Arial", size: 20)
         return labelStart
@@ -20,19 +20,20 @@ class ViewController: UIViewController {
     
     private var buttonStart: UIButton = {
         let buttonStart = UIButton()
-        buttonStart.setTitle("Press Me, Pidor", for: .normal)
+        buttonStart.setTitle("Press Me, man", for: .normal)
         buttonStart.titleLabel?.textColor = UIColor.purple
         return buttonStart
     }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.addSubview(labelStart)
+        view.addSubview(buttonStart)
         configureView()
     }
 
     private func configureView() {
-        view.addSubview(labelStart)
-        view.addSubview(buttonStart)
+        
     }
     
     
